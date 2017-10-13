@@ -6,14 +6,14 @@ import GuessCount  from './guess-count';
 import GuessList from './guess-list';
 
 export default class Game extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            guesses: [],
-            feedback: 'Make your guess!',
-            correctAnswer: Math.floor(Math.random() * 100) + 1,
-        };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         guesses: [],
+    //         feedback: 'Make your guess!',
+    //         correctAnswer: Math.floor(Math.random() * 100) + 1,
+    //     };
+    // }
 
     newGame() {
         this.setState({
@@ -69,4 +69,3 @@ export default class Game extends React.Component {
         );
     }
 }
-
