@@ -14,7 +14,8 @@ from other files
 const initialState = {
   guesses: [],
   feedback: 'Make your guess!',
-  correctAnswer: Math.floor(Math.random() * 100) + 1
+  correctAnswer: Math.floor(Math.random() * 100) + 1,
+  showInfoModal: false
 };
 
 /*
@@ -97,17 +98,18 @@ export default (state, action) => {
 
     return state;
   }
-  // else if (action.type === GET_INFO) {
-  //   state = Object.assign (
-  //     //create new Object
-  //     {},
-  //     //copy over all props from state
-  //     initialState,
-  //     //create new state
-  //     {}
-  //
-  //   );
-  //   return state;
-  // }
+  else if (action.type === GET_INFO) {
+    state = Object.assign (
+      //create new Object
+      {},
+      //copy over all props from state
+      initialState,
+      //create new state
+      {
+        showInfoModel: !state.showInfoModel
+      }
+    );
+    return state;
+  }
   return state;
 };

@@ -5,7 +5,7 @@
 */
 
 export const MAKE_GUESS = 'MAKE_GUESS';
-export const makeGuess = (guess) -> ({
+export const makeGuess = (guess) => ({
   type: MAKE_GUESS,
   // [whatever gets passed into function]
   // [or whatever function needs to happen]
@@ -25,5 +25,6 @@ export const newGame = () => ({
   type: NEW_GAME,
   // [whatever gets passed into function]
   // [or whatever function needs to happen]
+  feedback: 'Make your guess!',
   correctAnswer: Math.floor(Math.random() * 100) + 1
 });
